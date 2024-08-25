@@ -21,6 +21,7 @@ Welcome to the **Muse** Banking Application project! This application is designe
       - [Automatic PostgreSql Installation](#automatic-postgresql-installation)
     - [3. Project Setup](#3-project-setup)
   - [Architecture](#architecture)
+  - [Database Schema](#database-schema)
   - [Development Workflow](#development-workflow)
   - [Postman Collection](#postman-collection)
   - [Swagger](#swagger)
@@ -138,6 +139,10 @@ mvn spring-boot:run
 
 If you're interested in contributing or learning more about the **Muse** codebase please refer to the [architecture document](docs/ARCHITECTURE.md) first for a high level overview of how the application is put together.
 
+## Database Schema
+
+The database schema is defined in the [DB_SCHEMA.md](docs/DB_SCHEMA.md) file.
+
 ## Development Workflow
 
 In the **Muse** project, we follow a structured development workflow to ensure efficient collaboration and code management. This workflow includes the following key components: branching strategy, versioning, and commit message conventions. By following these guidelines, we aim to maintain a clean and organized codebase that is easy to manage and contribute to. For more information, please refer to the [Development Workflow](docs/DEVELOPMENT_WORKFLOW.md) document.
@@ -157,11 +162,11 @@ The Postman collection for the **Muse** project can be found in the `postman` di
 
 ## Code of Conduct
 
-Please read the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to the project.
+Please read the [Code of Conduct](docs/CODE_OF_CONDUCT.md) before contributing to the project.
 
 ## Security Policy
 
-Please read the [Security Policy](SECURITY.md) before contributing to the project.
+Please read the [Security Policy](docs/SECURITY.md) before contributing to the project.
 
 ## Contact Us
 

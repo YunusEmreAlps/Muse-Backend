@@ -66,4 +66,19 @@ public class JwtUtils {
 
     return false;
   }
+
+  public String parseJwt(HttpServletRequest request) {
+    String headerAuth = request.getHeader("Authorization");
+
+    if (headerAuth != null && headerAuth.startsWith("Bearer ")) {
+      return headerAuth.substring(7);
+    }
+
+    Cookie cookie = WebUtils.getCookie(request, "token");
+    if (cookie != null) {
+      return cookie.getValue();
+    }
+
+    return null;
+  }
 }

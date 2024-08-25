@@ -89,9 +89,7 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
     http.csrf(csrf -> csrf.disable())
         .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-        .authorizeHttpRequests(auth -> auth.antMatchers("/api/auth/**").permitAll()
-            .antMatchers("/api/test/**").permitAll()
-            .antMatchers("/api/users/**").permitAll()
+        .authorizeHttpRequests(auth -> auth.antMatchers("/api/users/**").permitAll()
             .antMatchers("/actuator/**").permitAll()
             .antMatchers("/").permitAll() // allow swagger
             .antMatchers("/swagger-ui/**").permitAll() // allow swagger
