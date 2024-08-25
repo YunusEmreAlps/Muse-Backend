@@ -16,11 +16,7 @@ import com.muse.spring.login.payload.request.AccountRequest;
 import com.muse.spring.login.repository.AccountRepository;
 import com.muse.spring.login.repository.UserRepository;
 import com.muse.spring.login.security.jwt.AuthEntryPointJwt;
-import com.muse.spring.login.security.jwt.AuthTokenFilter;
 import com.muse.spring.login.security.jwt.JwtUtils;
-import com.muse.spring.login.security.services.UserDetailsImpl;
-
-import io.micrometer.core.instrument.search.Search;
 
 import java.util.List;
 import java.util.Optional;
