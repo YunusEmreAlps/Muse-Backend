@@ -25,6 +25,7 @@ import java.util.Collections;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -143,7 +144,7 @@ public class AccountController {
   // Delete Account
   // Deletes the selected account for the authenticated user.
   // DELETE /api/accounts/{id}
-  @RequestMapping(value = "/{id}")
+  @DeleteMapping(value = "/{id}")
   public void deleteAccount(@PathVariable("id") String id) {
     // Get the authenticated user
     try {
@@ -169,17 +170,14 @@ public class AccountController {
   // restricted to the account owner.
   // GET /api/accounts/{id}
   @GetMapping("/{id}")
-  public Account viewAccountDetails(@PathVariable("id") String id) {
+  public Account viewAccountDetails(@PathVariable("id") UUID id) {
     try {
-      UUID accountId = UUID.fromString(id);
-
-      Optional<Account> accountOptional = accountRepository.findById(accountId);
+      Optional<Account> accountOptional = accountRepository.findById(id);
 
       if (accountOptional.isEmpty()) {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found");
       } else {
-        Account account = accountOptional.get();
-        return account;
+        return accountOptional.get();
       }
     } catch (Exception e) {
       logger.error("Error viewing account details", e);

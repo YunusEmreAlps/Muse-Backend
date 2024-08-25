@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "78b4d224-c9a9-4033-9b77-2fd8d16f5fcb",
+		"name": "Muse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10954877"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "View Account Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NTc4OTM5LCJleHAiOjE3MjQ1ODI1Mzl9.Ca-en9xsLv7Bt7zk_xp-Yp8sG_sCAOWfDLmpsaqJXoo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080//api/accounts/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"api",
+								"accounts",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"number\": \"Test3\",\r\n  \"name\": \"Test3\",\r\n  \"balance\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"accounts"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\r\n  'http://localhost:8080/api/accounts' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"number\": \"Test3\",\r\n  \"name\": \"Test3\",\r\n  \"balance\": 1000\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/accounts/961b274e-14c0-49fa-9403-7b3864f2af36",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"accounts",
+								"961b274e-14c0-49fa-9403-7b3864f2af36"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\r\n  'http://localhost:8080/api/accounts/961b274e-14c0-49fa-9403-7b3864f2af36' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI'"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"number\": \"Test4\",\r\n  \"name\": \"Test3\",\r\n  \"balance\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/accounts/886e9a92-06ba-4835-a3e9-19d9333ad605",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"accounts",
+								"886e9a92-06ba-4835-a3e9-19d9333ad605"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'http://localhost:8080/api/accounts/886e9a92-06ba-4835-a3e9-19d9333ad605' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"number\": \"Test4\",\r\n  \"name\": \"Test3\",\r\n  \"balance\": 500\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "View Account Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAyODc4LCJleHAiOjE3MjQ2MDY0Nzh9.34OIyV6Vg2QpCN5tHp0wuvot596GLs0AqPtupIVSDsk"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/accounts/886e9a92-06ba-4835-a3e9-19d9333ad605",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"accounts",
+								"886e9a92-06ba-4835-a3e9-19d9333ad605"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/api/accounts/886e9a92-06ba-4835-a3e9-19d9333ad605' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAyODc4LCJleHAiOjE3MjQ2MDY0Nzh9.34OIyV6Vg2QpCN5tHp0wuvot596GLs0AqPtupIVSDsk'"
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAyODc4LCJleHAiOjE3MjQ2MDY0Nzh9.34OIyV6Vg2QpCN5tHp0wuvot596GLs0AqPtupIVSDsk"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/accounts?number=Test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "Test"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/api/accounts?number=Test' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAyODc4LCJleHAiOjE3MjQ2MDY0Nzh9.34OIyV6Vg2QpCN5tHp0wuvot596GLs0AqPtupIVSDsk'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"alpu\",\r\n  \"email\": \"YunusAlpu@icloud.com\",\r\n  \"password\": \"Yunus12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"alpu\",\r\n  \"password\": \"Yunus12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "View Transaction History",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/account/{accountId}?accountId=bbfa172d-ef6f-4dc7-b089-fd2b3c1e6a15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"account",
+								"{accountId}"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "bbfa172d-ef6f-4dc7-b089-fd2b3c1e6a15"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\r\n  'http://localhost:8080/api/transactions/account/{accountId}?accountId=bbfa172d-ef6f-4dc7-b089-fd2b3c1e6a15' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI'"
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Money Transfer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/transactions/transfer?fromAccountId=ddb624ee-99b9-4513-99e2-a8886a9fe83b&toAccountId=bbfa172d-ef6f-4dc7-b089-fd2b3c1e6a15&amount=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "fromAccountId",
+									"value": "ddb624ee-99b9-4513-99e2-a8886a9fe83b"
+								},
+								{
+									"key": "toAccountId",
+									"value": "bbfa172d-ef6f-4dc7-b089-fd2b3c1e6a15"
+								},
+								{
+									"key": "amount",
+									"value": "100"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\r\n  'http://localhost:8080/api/transactions/transfer?fromAccountId=ddb624ee-99b9-4513-99e2-a8886a9fe83b&toAccountId=bbfa172d-ef6f-4dc7-b089-fd2b3c1e6a15&amount=100' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHB1IiwiaWF0IjoxNzI0NjAwMzUxLCJleHAiOjE3MjQ2MDM5NTF9.m0a1_f5oSjanbFq9VZbXugBXNYPgIHYS4-tX3YJv6SI' \\\r\n  -d ''\r\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actuator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api Docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v3/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prometheus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/prometheus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"prometheus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metrics",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/metrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

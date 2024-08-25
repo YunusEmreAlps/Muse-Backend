@@ -153,12 +153,50 @@ The Postman collection for the **Muse** project can be found in the `postman` di
 
 - Open Postman
 - Click on the "Import" button in the top left corner
-- Drag and drop the `muse.postman_collection.json` file into the import window
+- Drag and drop the `Muse.postman_collection.json` file into the import window
 - The collection will be imported into Postman, and you can start using the API requests to interact with the application
 
 ## Swagger
 
 - Swagger UI is available at `localhost:8080/`
+
+- You can access the Swagger UI by opening the following URL in your browser:
+
+```bash
+http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+```
+
+- First you need to register to the application to access the endpoints. You can use the following credentials to register:
+
+```json
+{
+  "username": "TestUser",
+  "email": "testuser@gmail.com",
+  "password": "password"
+}
+```
+
+![Step 1](docs/ss/step1.png)
+![Step 1 Response](docs/ss/step1_response.png)
+
+- After you register, you can login with the following credentials:
+
+```json
+{
+  "username": "TestUser",
+  "password": "password"
+}
+```
+
+![Step 2](docs/ss/step2.png)
+![Step 2 Response](docs/ss/step2_response.png)
+
+- Finally, you can copy the token from the response and paste it to the `Authorize` button at the top right corner of the Swagger UI. You can access the endpoints after you authorize with the prefix `Bearer` and a space before the token.
+
+![Step 3](docs/ss/step3.png)
+![Step 3 Response](docs/ss/step3_response.png)
+
+- You can now access the endpoints and test them with the Swagger UI.
 
 ## Code of Conduct
 
